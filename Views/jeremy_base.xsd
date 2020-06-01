@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="jeremy_base" targetNamespace="http://tempuri.org/jeremy_base.xsd" xmlns:mstns="http://tempuri.org/jeremy_base.xsd" xmlns="http://tempuri.org/jeremy_base.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="Jeremy_munoz_riveraConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Jeremy_munoz_riveraConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.Jeremy_munoz_riveraConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Jeremy_munoz_riveraConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tbl_Empleado.id_empleado, Tbl_Empleado.nombre_empleado+'-'+ Tbl_Empleado.apellido_empleado as 'Nombre_Del_Empleado', Tbl_Empleado.DNI_empleado, Tbl_Empleado.cargo_empleado, Tbl_Empleado.estado_empleado, 
+                         Tbl_Empresa.nombre_empresa, Tbl_Producto.nombre_producto, Tbl_Producto.fecha_producto, Tbl_Proveedor.nombre_proveedor, Tbl_Producto.stock_producto, Tbl_Producto.estado_producto
+FROM            Tbl_Proveedor INNER JOIN
+                         Tbl_Producto ON Tbl_Proveedor.id_proveedor = Tbl_Producto.id_proveedor CROSS JOIN
+                         Tbl_Empleado INNER JOIN
+                         Tbl_Empresa ON Tbl_Empleado.id_empresa = Tbl_Empresa.id_empresa</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_empleado" DataSetColumn="id_empleado" />
+              <Mapping SourceColumn="Nombre_Del_Empleado" DataSetColumn="Nombre_Del_Empleado" />
+              <Mapping SourceColumn="DNI_empleado" DataSetColumn="DNI_empleado" />
+              <Mapping SourceColumn="cargo_empleado" DataSetColumn="cargo_empleado" />
+              <Mapping SourceColumn="estado_empleado" DataSetColumn="estado_empleado" />
+              <Mapping SourceColumn="nombre_empresa" DataSetColumn="nombre_empresa" />
+              <Mapping SourceColumn="nombre_producto" DataSetColumn="nombre_producto" />
+              <Mapping SourceColumn="fecha_producto" DataSetColumn="fecha_producto" />
+              <Mapping SourceColumn="nombre_proveedor" DataSetColumn="nombre_proveedor" />
+              <Mapping SourceColumn="stock_producto" DataSetColumn="stock_producto" />
+              <Mapping SourceColumn="estado_producto" DataSetColumn="estado_producto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="jeremy_base" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="jeremy_base" msprop:Generator_UserDSName="jeremy_base">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_empleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_empleado" msprop:Generator_ColumnPropNameInRow="id_empleado" msprop:Generator_ColumnPropNameInTable="id_empleadoColumn" msprop:Generator_UserColumnName="id_empleado" type="xs:int" />
+              <xs:element name="Nombre_Del_Empleado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre_Del_Empleado" msprop:Generator_ColumnPropNameInRow="Nombre_Del_Empleado" msprop:Generator_ColumnPropNameInTable="Nombre_Del_EmpleadoColumn" msprop:Generator_UserColumnName="Nombre_Del_Empleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNI_empleado" msprop:Generator_ColumnVarNameInTable="columnDNI_empleado" msprop:Generator_ColumnPropNameInRow="DNI_empleado" msprop:Generator_ColumnPropNameInTable="DNI_empleadoColumn" msprop:Generator_UserColumnName="DNI_empleado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cargo_empleado" msprop:Generator_ColumnVarNameInTable="columncargo_empleado" msprop:Generator_ColumnPropNameInRow="cargo_empleado" msprop:Generator_ColumnPropNameInTable="cargo_empleadoColumn" msprop:Generator_UserColumnName="cargo_empleado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado_empleado" msprop:Generator_ColumnVarNameInTable="columnestado_empleado" msprop:Generator_ColumnPropNameInRow="estado_empleado" msprop:Generator_ColumnPropNameInTable="estado_empleadoColumn" msprop:Generator_UserColumnName="estado_empleado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_empresa" msprop:Generator_ColumnVarNameInTable="columnnombre_empresa" msprop:Generator_ColumnPropNameInRow="nombre_empresa" msprop:Generator_ColumnPropNameInTable="nombre_empresaColumn" msprop:Generator_UserColumnName="nombre_empresa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_producto" msprop:Generator_ColumnVarNameInTable="columnnombre_producto" msprop:Generator_ColumnPropNameInRow="nombre_producto" msprop:Generator_ColumnPropNameInTable="nombre_productoColumn" msprop:Generator_UserColumnName="nombre_producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_producto" msprop:Generator_ColumnVarNameInTable="columnfecha_producto" msprop:Generator_ColumnPropNameInRow="fecha_producto" msprop:Generator_ColumnPropNameInTable="fecha_productoColumn" msprop:Generator_UserColumnName="fecha_producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_proveedor" msprop:Generator_ColumnVarNameInTable="columnnombre_proveedor" msprop:Generator_ColumnPropNameInRow="nombre_proveedor" msprop:Generator_ColumnPropNameInTable="nombre_proveedorColumn" msprop:Generator_UserColumnName="nombre_proveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stock_producto" msprop:Generator_ColumnVarNameInTable="columnstock_producto" msprop:Generator_ColumnPropNameInRow="stock_producto" msprop:Generator_ColumnPropNameInTable="stock_productoColumn" msprop:Generator_UserColumnName="stock_producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado_producto" msprop:Generator_ColumnVarNameInTable="columnestado_producto" msprop:Generator_ColumnPropNameInRow="estado_producto" msprop:Generator_ColumnPropNameInTable="estado_productoColumn" msprop:Generator_UserColumnName="estado_producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id_empleado" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

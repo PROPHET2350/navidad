@@ -1,0 +1,20 @@
+#botonModal
+{   
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+#cargo,#cargoM
+{
+    height: 50px;
+}
+.fa-pencil-alt
+{
+    color: green;
+}
+.fa-times-circle
+{
+    color: red;
+}
